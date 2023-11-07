@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 import com.example.entities.Joueur;
 import com.example.repositories.JoueurRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
+@Transactional
 public class JoueurService {
 	@Autowired
 	JoueurRepository jr;

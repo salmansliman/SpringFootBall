@@ -12,8 +12,11 @@ import com.example.entities.Joueur;
 import com.example.repositories.EquipeRepository;
 import com.example.repositories.JoueurRepository;
 
+import jakarta.transaction.Transactional;
+
 
 @Service
+@Transactional
 public class EquipeService {
 	@Autowired
 	EquipeRepository er;

@@ -10,8 +10,11 @@ import com.example.entities.Match;
 import com.example.repositories.ArbitreRepository;
 import com.example.repositories.MatchRepository;
 
+import jakarta.transaction.Transactional;
+
 
 @Service
+@Transactional
 public class ArbitreService {
 	@Autowired
 	ArbitreRepository ar;

@@ -11,7 +11,10 @@ import com.example.entities.Stade;
 import com.example.repositories.MatchRepository;
 import com.example.repositories.StadeRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
+@Transactional
 public class StadeService {
 	@Autowired
 	StadeRepository sr;

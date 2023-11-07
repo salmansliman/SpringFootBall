@@ -11,8 +11,12 @@ import org.springframework.stereotype.Service;
 import com.example.entities.Match;
 import com.example.repositories.MatchRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
+@Transactional
 public class MatchService {
+	
 	@Autowired
 	MatchRepository mr;
 	
@@ -35,6 +39,7 @@ public class MatchService {
 	}
 	public void deleteMatchDepasse() {
 		Date date = Calendar.getInstance().getTime();
+		
 		mr.deleteByDateMatchBefore(date);
 	}
 
