@@ -50,4 +50,7 @@ public class EquipeService {
 	public List<Joueur> getJoueurByEquipeNom(String nomEquipe){
 		return jr.findByEquipe_nomEquipe(nomEquipe);
 	}
+	public List<Equipe> findEquipesByMatchesId(Long id){
+		return er.findByMatches_idMAtch(id);
+	}
 }

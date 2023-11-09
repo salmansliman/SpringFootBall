@@ -11,5 +11,5 @@ import com.example.entities.Joueur;
 @Repository
 public interface EquipeRepository extends JpaRepository<Equipe, Long>{
 	List<Equipe> findByPays(String pays);
-
+	List<Equipe> findByMatches_idMAtch(Long id);
 }

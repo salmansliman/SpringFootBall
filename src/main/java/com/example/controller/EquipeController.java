@@ -47,6 +47,10 @@ public class EquipeController {
 	public List <Joueur> getJoueurByEquipeNom(@PathVariable String nomEquipe){
 		return es.getJoueurByEquipeNom(nomEquipe);
 	}
+	@GetMapping("match/equipes/{id}")
+	public List<Equipe> findEquipesByMatchesId(@PathVariable Long id){
+		return es.findEquipesByMatchesId(id);
+	}
 	
 	
 
